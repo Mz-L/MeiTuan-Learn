@@ -50,3 +50,10 @@ npm install react@^15.4.0-rc.4 --save    根据提示安装依赖的 react
 ### 一 首页底部 tabBar 的简单实现
 
 ### 二 首页TopBar组件的简单实现
+
+### 三 其他顶栏的实现
+
+
+
+
+

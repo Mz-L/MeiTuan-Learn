@@ -8,11 +8,13 @@ import {
   View
 } from 'react-native';
 
+import OrderBar from '../../components/OrderBar';
 
 export default class OrderPage extends Component {
   render() {
     return (
         <View>
+          <OrderBar></OrderBar>
           <Text>OrderPage</Text>
         </View>
     );

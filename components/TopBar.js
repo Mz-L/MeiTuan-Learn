@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   viewCenterStyle:{
     flex:3,
     flexDirection:'row',
-    alignItems:'center',
+    alignItems:'center'
   },
   viewRightStyle:{
     flex:1,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   imageRightStyle:{
     width:19,
-    height:19,
+    height:19
   },
   textStyle:{
     color:'white'

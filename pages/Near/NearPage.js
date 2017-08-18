@@ -8,11 +8,13 @@ import {
   View
 } from 'react-native';
 
+import NearBar from '../../components/NearBar';
 
 export default class NearPage extends Component {
   render() {
     return (
         <View>
+          <NearBar></NearBar>
           <Text>NearPage</Text>
         </View>
     );

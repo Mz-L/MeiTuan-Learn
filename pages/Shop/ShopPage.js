@@ -8,11 +8,13 @@ import {
   View
 } from 'react-native';
 
+import ShopBar from '../../components/ShopBar';
 
 export default class ShopPage extends Component {
   render() {
     return (
         <View>
+          <ShopBar></ShopBar>
           <Text>ShopPage</Text>
         </View>
     );
