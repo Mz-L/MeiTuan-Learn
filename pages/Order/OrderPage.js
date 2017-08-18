@@ -3,9 +3,9 @@
  */
 import React, { Component } from 'react';
 import {
-    StyleSheet,
-    Text,
-    View
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 
 
