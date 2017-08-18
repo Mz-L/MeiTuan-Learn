@@ -11,6 +11,9 @@ import {
 } from 'react-native';
 
 import TabNavigator from 'react-native-tab-navigator';
+import Dimensions from 'Dimensions';
+var windowW = Dimensions.get('window').width;
+var windowH = Dimensions.get('window').height;
 
 import HomePage from '../Home/HomePage';
 import NearPage from '../Near/NearPage';
@@ -97,6 +100,9 @@ export default class MainPage extends Component {
 const styles = StyleSheet.create({
   tabBarStyle:{
     height:50,
+    position:'relative',
+    left:0,
+    top:windowH-75
   },
   imageStyle:{
     width:Platform.OS=='ios'?30:25,

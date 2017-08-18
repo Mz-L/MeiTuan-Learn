@@ -8,11 +8,13 @@ import {
   View
 } from 'react-native';
 
+import TopBar from '../../components/TopBar';
 
 export default class HomePage extends Component {
   render() {
     return (
         <View>
+          <TopBar></TopBar>
           <Text>HomePage</Text>
         </View>
     );
