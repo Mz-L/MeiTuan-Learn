@@ -8,7 +8,6 @@ import {
     View,
     Image,
     TouchableOpacity,
-    TextInput
 } from 'react-native';
 
 
@@ -28,16 +27,16 @@ export default class MineBar extends Component {
       var img = icons[i];
       if(img.hasMsg){
         items.push(
-          <View key={i}>
+          <TouchableOpacity key={i} style={styles.viewStyle} activeOpacity={0.5} onPress={ ()=>{alert(8)} }>
             <Image style={styles.imageStyle} source={{uri:img.icon}}></Image>
             <Text style={styles.msgStyle}>{img.msgNumber}</Text>
-          </View>
+          </TouchableOpacity>
         )
       }else{
         items.push(
-          <View key={i}>
+          <TouchableOpacity key={i} style={styles.viewStyle} activeOpacity={0.5} onPress={ ()=>{alert(8)} }>
             <Image style={styles.imageStyle} source={{uri:img.icon}}></Image>
-          </View>
+          </TouchableOpacity>
         )
       }
     }
@@ -54,6 +53,10 @@ const styles = StyleSheet.create({
     justifyContent:'flex-end',
     paddingRight:5
   },
+  viewStyle:{
+    paddingTop:5,
+    height:30
+  },
   imageStyle:{
     width:22,
     height:22,
@@ -65,8 +68,8 @@ const styles = StyleSheet.create({
     borderRadius:6,
     backgroundColor:'red',
     position:'absolute',
-    top:-3,
-    right:0,
+    top:1,
+    right:1,
     fontSize:8,
     color:'white',
     textAlign:'center'
