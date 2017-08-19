@@ -7,25 +7,30 @@ import {
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  InteractionManager
 } from 'react-native';
 
 import MineBar from '../../components/MineBar';
 import DivideLine from '../../components/DivideLine';
 import DivideSmallLine from '../../components/DivideSmallLine';
 import MineItemView from './MineItemView';
+import LoginPage from '../Login/LoginPage';
 
 import MineBean from '../../data/MineBean.json';
+
+var _this;
 
 export default class MinePage extends Component {
   constructor(props){
     super(props);
     this.state={
-      Icons:MineBean.TopBar,
+      Icons:MineBean.topBar,
       headerItem:MineBean.headerItem,
       items:MineBean.items,
       userId:''
-    }
+    };
+    _this = this;
   }
   render() {
     return (
@@ -99,7 +104,25 @@ export default class MinePage extends Component {
   }
   /*login*/
   goToLogin(){
-    alert(1)
+    if(this.state.userId==''){
+      InteractionManager.runAfterInteractions( ()=>{
+        this.props.navigator.push({
+          component:LoginPage,
+          title:'LoginPage',
+          params:{
+            getUser:(user)=>{
+              _this.setState({
+                Icons:user.topBar,
+                headerItem:user.headerItem,
+                items:user.items,
+                userId:user.id
+              })
+            }
+          }
+        })
+      } )
+    }
+
   }
 }
 

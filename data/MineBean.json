@@ -1,7 +1,7 @@
 {
-  "TopBar":[
-    {"icon":"mine_alarm","hasMsg":true,"msgNumber":"3"},
-    {"icon":"mine_clothes","hasMsg":true,"msgNumber":"1"},
+  "topBar":[
+    {"icon":"mine_alarm","hasMsg":false,"msgNumber":"0"},
+    {"icon":"mine_clothes","hasMsg":false,"msgNumber":"0"},
     {"icon":"mine_setting","hasMsg":false,"msgNumber":"0"}
   ],
 
@@ -15,8 +15,8 @@
   "items":[
     [
       {"icon":"user_main_wallet","titleLeft":"我的钱包","titleRight":"办信用卡"},
-      {"icon":"user_main_balance","titleLeft":"余额","titleRight":"￥0.00"},
-      {"icon":"order_ic_vector_unused_new","titleLeft":"抵用卷","titleRight":"0"}
+      {"icon":"user_main_balance","titleLeft":"余额","titleRight":""},
+      {"icon":"order_ic_vector_unused_new","titleLeft":"抵用卷","titleRight":""}
     ],
     [
       {"icon":"takeout_ic_user_selected","titleLeft":"好友去哪","titleRight":""},

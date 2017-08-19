@@ -42,7 +42,7 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='首页' }
             onPress={ ()=>this.setState({selected:'首页'}) }
           >
-            <HomePage></HomePage>
+            <HomePage {...this.props}></HomePage>
           </TabNavigator.Item>
 
           {/*item2*/}
@@ -54,7 +54,7 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='附近' }
             onPress={ ()=>this.setState({selected:'附近'}) }
           >
-            <NearPage></NearPage>
+            <NearPage {...this.props}></NearPage>
           </TabNavigator.Item>
 
           {/*item3*/}
@@ -66,7 +66,7 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='逛一逛' }
             onPress={ ()=>this.setState({selected:'逛一逛'}) }
           >
-            <ShopPage></ShopPage>
+            <ShopPage {...this.props}></ShopPage>
           </TabNavigator.Item>
 
           {/*item4*/}
@@ -78,7 +78,7 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='订单' }
             onPress={ ()=>this.setState({selected:'订单'}) }
           >
-            <OrderPage></OrderPage>
+            <OrderPage {...this.props}></OrderPage>
           </TabNavigator.Item>
 
           {/*item5*/}
@@ -90,7 +90,7 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='我的' }
             onPress={ ()=>this.setState({selected:'我的'}) }
           >
-            <MinePage></MinePage>
+            <MinePage {...this.props}></MinePage>
           </TabNavigator.Item>
         </TabNavigator>
     );

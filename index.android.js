@@ -7,9 +7,9 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
-  View
+  View,
+  Navigator
 } from 'react-native';
 
 import MainPage from './pages/Main/MainPage';
@@ -17,13 +17,16 @@ import MainPage from './pages/Main/MainPage';
 export default class MeiTuan extends Component {
   render() {
     return (
-      <MainPage></MainPage>
+      <Navigator
+        initialRoute={{name:'MainPage',component:MainPage}}
+        configureScene={ ()=>Navigator.SceneConfigs.PushFromRight }
+        renderScene={ (route,navigator)=>{
+          let Component = route.component;
+          return <Component {...route.params} navigator={navigator}/>
+        } }
+      />
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-});
 
 AppRegistry.registerComponent('MeiTuan', () => MeiTuan);
