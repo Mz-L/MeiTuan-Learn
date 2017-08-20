@@ -40,7 +40,8 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='首页' }
             onPress={ ()=>this.setState({selected:'首页'}) }
           >
-            <HomePage {...this.props}></HomePage>
+            {/*<HomePage {...this.props}></HomePage>*/}
+            <Text>123</Text>
           </TabNavigator.Item>
 
           {/*item2*/}
