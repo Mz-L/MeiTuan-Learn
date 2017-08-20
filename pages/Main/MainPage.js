@@ -18,6 +18,8 @@ import NearPage from '../Near/NearPage';
 import ShopPage from '../Shop/ShopPage';
 import OrderPage from '../Order/OrderPage';
 import MinePage from '../Mine/MinePage';
+//测试轮播图
+//import Banner from '../../components/Banner';
 
 export default class MainPage extends Component {
   constructor(props){
@@ -40,8 +42,9 @@ export default class MainPage extends Component {
             selected={ this.state.selected=='首页' }
             onPress={ ()=>this.setState({selected:'首页'}) }
           >
-            {/*<HomePage {...this.props}></HomePage>*/}
-            <Text>123</Text>
+            <HomePage {...this.props}></HomePage>
+
+            {/* 测试轮播图: <Banner></Banner>*/}
           </TabNavigator.Item>
 
           {/*item2*/}
