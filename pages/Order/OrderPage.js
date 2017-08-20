@@ -5,10 +5,15 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView,
+  RefreshControl
 } from 'react-native';
 
 import OrderBar from '../../components/OrderBar';
+import OrderItemBar from './OrderItemBar';
+import OrderItemView from './OrderItemView';
+
 
 export default class OrderPage extends Component {
   render() {

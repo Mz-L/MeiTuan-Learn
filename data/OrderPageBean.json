@@ -2,7 +2,7 @@
   "orderbars": [
     {
       "hasMsg": false,
-      "msgNumber": 1,
+      "msgNumber": 0,
       "icon": "http://47.93.30.78:8080/MeiTuan/image/mine/order_ic_vector_unpaid_new.png",
       "title": "待付款"
     },

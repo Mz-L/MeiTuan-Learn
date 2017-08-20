@@ -32,6 +32,7 @@ export default class HomePage extends Component {
   }
 
   render() {
+
     return (
         <View style={styles.viewStyle}>
           {/*顶栏*/}
