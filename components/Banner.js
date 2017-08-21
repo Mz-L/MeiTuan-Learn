@@ -81,7 +81,7 @@ var Banner = React.createClass({
     for(var i = 0;i<BannerImage.length;i++){
       var img = BannerImage[i];
       items.push(
-          <Image key={i} source={{uri:img.icon}} style={styles.imageBannerStyle}></Image>
+          <Image key={i} style={styles.imageBannerStyle} source={{uri:img.icon}}/>
       )
     }
     return items;
@@ -93,7 +93,7 @@ var Banner = React.createClass({
       //var img = BannerImage[i];
       var bgStyle = this.state.currentPage == i ? 'orange' : 'white';
       cirles.push(
-        <Text key={i} style={[{backgroundColor:bgStyle},styles.textCirlesStyle]}></Text>
+        <Text key={i} style={[{backgroundColor:bgStyle},styles.textCirlesStyle]}/>
       )
     }
     return cirles;

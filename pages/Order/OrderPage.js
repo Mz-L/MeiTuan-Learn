@@ -55,7 +55,7 @@ export default class OrderPage extends Component {
   render() {
     return (
         <View style={styles.viewStyle}>
-          <OrderBar></OrderBar>
+          <OrderBar/>
 
           <ScrollView
             refreshControl={
@@ -71,16 +71,16 @@ export default class OrderPage extends Component {
             }
           >
             {/*我的订单*/}
-            <OrderItemView option={items[0]}></OrderItemView>
+            <OrderItemView option={items[0]}/>
             {/* 代付款,待使用,待评价,退款/稍后 */}
-            <OrderItemBar orderbars={this.state.orderPage.orderbars}></OrderItemBar>
+            <OrderItemBar orderbars={this.state.orderPage.orderbars}/>
             {/*最近订单*/}
             <Text style={{fontSize:12,backgroundColor:'#dddddd',height:22,paddingTop:3,paddingLeft:10}}>最近订单</Text>
             {/*最近订单中的列表*/}
             {this.renderOrderItems(this.state.orderPage.nearOrder)}
 
             {/*最近浏览*/}
-            <OrderItemView option={items[1]}></OrderItemView>
+            <OrderItemView option={items[1]}/>
             {/*最近订单中的列表*/}
             {this.renderOrderItems(this.state.orderPage.nearBeans)}
 
@@ -94,7 +94,7 @@ export default class OrderPage extends Component {
     for(var i=0;i<data.length;i++){
       var order=data[i];
       Items.push(
-          <NearItem key={i} rowDate={order}></NearItem>
+          <NearItem key={i} rowDate={order}/>
       )
     }
 

@@ -19,6 +19,8 @@ import LoginPage from '../Login/LoginPage';
 
 import MineBean from '../../data/MineBean.json';
 
+import ShopPage from '../Shop/ShopPage';
+
 var _this;
 
 export default class MinePage extends Component {
@@ -36,7 +38,7 @@ export default class MinePage extends Component {
     return (
         <View>
           {/*topBar*/}
-          <MineBar icons={this.state.Icons}></MineBar>
+          <MineBar icons={this.state.Icons}/>
           {/*headerItem*/}
           {this.renderHeaderItem()}
           {/*items*/}
@@ -55,17 +57,17 @@ export default class MinePage extends Component {
       >
         {/*左侧*/}
         <View>
-          <Image style={styles.imageLeftStyle} source={{uri:headerItem.headerImage}}></Image>
+          <Image source={{uri:headerItem.headerImage}} style={styles.imageLeftStyle}/>
         </View>
         {/*右侧*/}
         <View>
           <View style={styles.viewContentStyle}>
             <Text style={styles.text1Style}>{headerItem.userName}</Text>
-            <Image style={styles.imageRightStyle} source={{uri:headerItem.leveImage}}></Image>
+            <Image source={{uri:headerItem.leveImage}} style={styles.imageRightStyle}/>
           </View>
           <View style={styles.viewContentStyle}>
             <Text style={styles.text2Style}>{headerItem.descrption}</Text>
-            <Image style={styles.imageRightStyle} source={{uri:'daily_recomm_arrow'}}></Image>
+            <Image source={{uri:'daily_recomm_arrow'}} style={styles.imageRightStyle}/>
           </View>
         </View>
       </TouchableOpacity>
@@ -78,7 +80,7 @@ export default class MinePage extends Component {
     for(var i = 0;i<ItemsData.length;i++){
       items.push(
         <View key={i}>
-          <DivideLine></DivideLine>
+          <DivideLine/>
         </View>
       );
       for(var j = 0;j<ItemsData[i].length;j++){
@@ -86,15 +88,15 @@ export default class MinePage extends Component {
         if(j==ItemsData[i].length-1){
           items.push(
               <View key={i+''+j}>
-                <MineItemView option={Item}></MineItemView>
+                <MineItemView option={Item}/>
               </View>
           )
         }
         else{
           items.push(
               <View key={i+''+j}>
-                <MineItemView option={Item}></MineItemView>
-                <DivideSmallLine></DivideSmallLine>
+                <MineItemView option={Item}/>
+                <DivideSmallLine/>
               </View>
           )
         }
@@ -104,6 +106,7 @@ export default class MinePage extends Component {
   }
   /*login*/
   goToLogin(){
+
     if(this.state.userId==''){
       InteractionManager.runAfterInteractions( ()=>{
         this.props.navigator.push({
@@ -120,7 +123,9 @@ export default class MinePage extends Component {
             }
           }
         })
+
       } )
+
     }
 
   }
@@ -130,7 +135,7 @@ const styles = StyleSheet.create({
   headerItemStyle:{
     flexDirection:'row',
     alignItems:'center',
-    backgroundColor:'#06C1AE',
+    backgroundColor:'#06C1AE'
   },
   imageLeftStyle:{
     width:45,
@@ -144,7 +149,7 @@ const styles = StyleSheet.create({
   },
   imageRightStyle:{
     width:12,
-    height:12,
+    height:12
   },
   text1Style:{
     color:'white'

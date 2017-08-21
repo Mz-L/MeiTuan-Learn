@@ -28,14 +28,14 @@ export default class MineBar extends Component {
       if(img.hasMsg){
         items.push(
           <TouchableOpacity key={i} style={styles.viewStyle} activeOpacity={0.5} onPress={ ()=>{alert(8)} }>
-            <Image style={styles.imageStyle} source={{uri:img.icon}}></Image>
+            <Image source={{uri:img.icon}} style={styles.imageStyle}/>
             <Text style={styles.msgStyle}>{img.msgNumber}</Text>
           </TouchableOpacity>
         )
       }else{
         items.push(
           <TouchableOpacity key={i} style={styles.viewStyle} activeOpacity={0.5} onPress={ ()=>{alert(8)} }>
-            <Image style={styles.imageStyle} source={{uri:img.icon}}></Image>
+            <Image source={{uri:img.icon}} style={styles.imageStyle}/>
           </TouchableOpacity>
         )
       }

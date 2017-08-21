@@ -27,7 +27,7 @@ export  default  class OrderItemBar extends Component{
         Items.push(
           <View key={i} style={styles.outViewStyle}>
             <View style={styles.innerViewStyle}>
-              <Image style={{width:30,height:30}} source={{uri:bar.icon}}></Image>
+              <Image source={{uri:bar.icon}} style={{width:30,height:30}}/>
               <Text>{bar.title}</Text>
             </View>
 
@@ -39,7 +39,7 @@ export  default  class OrderItemBar extends Component{
         Items.push(
           <View key={i} style={styles.outViewStyle}>
             <View style={styles.innerViewStyle}>
-              <Image style={{width:30,height:30}} source={{uri:bar.icon}}></Image>
+              <Image source={{uri:bar.icon}} style={{width:30,height:30}}/>
               <Text>{bar.title}</Text>
             </View>
           </View>

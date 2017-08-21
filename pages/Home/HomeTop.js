@@ -7,8 +7,7 @@ import {
   Text,
   View,
   Image,
-  ScrollView,
-  TouchableOpacity
+  ScrollView
 } from 'react-native';
 
 import Screen from '../../utils/Screen';
@@ -17,6 +16,10 @@ var imageWidth = 50;
 var marginLeft = (Screen.w-imageWidth*col)/(col+1);
 
 export default class HomeTop extends Component {
+
+  static defaultProps={
+    categorys:[]
+  };
 
   constructor(props){
     super(props);
@@ -62,7 +65,10 @@ export default class HomeTop extends Component {
       for(var i = 0;i<len/2;i++){
         var item = cateData[i];
         items.push(
-            this.renderItems(i,item)
+            <View key={i} style={styles.outViewStyle}>
+              <Image source={{uri:item.icon}} style={styles.imageStyle}/>
+              <Text style={styles.textStyle}>{item.title}</Text>
+            </View>
         )
       }
     }
@@ -70,11 +76,14 @@ export default class HomeTop extends Component {
       for(var i = len/2;i<len;i++){
         var item = cateData[i];
         items.push(
-            this.renderItems(i,item)
+            <View key={i} style={styles.outViewStyle}>
+              <Image source={{uri:item.icon}} style={styles.imageStyle}/>
+              <Text style={styles.textStyle}>{item.title}</Text>
+            </View>
         )
       }
     }
-    console.log(items);
+
     return items;
   }
 
@@ -84,25 +93,12 @@ export default class HomeTop extends Component {
     this.setState({currentPage:page});
   }
 
-  renderItems(i,item){
-    return (
-      <TouchableOpacity key={i} style={styles.outViewStyle} onPress={ ()=>this.clickIcon(item) }>
-        <Image style={styles.imageStyle} source={{uri:item.icon}}></Image>
-        <Text style={styles.textStyle}>{item.title}</Text>
-      </TouchableOpacity>
-    )
-  }
-
-  clickIcon(item){
-    alert(item.title)
-  }
-
   renderCirles(n){
     var cirles = [];
     for(var i = 0;i<n;i++){
       var bgColor = this.state.currentPage==i?'#06C1AE':'#dddddd';
       cirles.push(
-        <Text key={i} style={[styles.textCirleStyle,{backgroundColor:bgColor}]}></Text>
+        <Text key={i} style={[styles.textCirleStyle,{backgroundColor:bgColor}]}/>
       )
     }
     return cirles;

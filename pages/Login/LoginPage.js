@@ -16,7 +16,7 @@ import {
 import Screen from '../../utils/Screen';
 import BackBar from '../../components/BackBar';
 
-export  default  class  DivideLine extends  Component{
+export  default  class  LoginPage extends  Component{
   constructor(props){
     super(props);
     this.state={
@@ -29,11 +29,11 @@ export  default  class  DivideLine extends  Component{
     return(
       <View style={styles.viewStyle}>
         {/*bar*/}
-        <BackBar navigator={this.props.navigator}></BackBar>
+        <BackBar navigator={this.props.navigator}/>
         {/*内容*/}
         <View style={styles.container}>
           {/*logo*/}
-          <Image style={styles.ImageStyle} source={{uri:'header_icon'}}></Image>
+          <Image source={{uri:'header_icon'}} style={styles.ImageStyle}/>
           {/*输入用户名和密码*/}
           <View style={{marginTop:20}}>
             <TextInput
@@ -67,9 +67,9 @@ export  default  class  DivideLine extends  Component{
           {/*其它登录方式*/}
           <View style={styles.viewOtherStyle}>
             <Text>其他登录方式</Text>
-            <Image style={styles.loginImage} source={{uri:'share_ic_base_share_qq'}}></Image>
-            <Image style={styles.loginImage} source={{uri:'share_ic_base_share_sina_weibo'}}></Image>
-            <Image style={styles.loginImage} source={{uri:'share_ic_base_share_weixin'}}></Image>
+            <Image source={{uri:'share_ic_base_share_qq'}} style={styles.loginImage}/>
+            <Image source={{uri:'share_ic_base_share_sina_weibo'}} style={styles.loginImage}/>
+            <Image source={{uri:'share_ic_base_share_weixin'}} style={styles.loginImage}/>
           </View>
         </View>
       </View>

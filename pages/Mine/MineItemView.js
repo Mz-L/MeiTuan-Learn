@@ -17,13 +17,13 @@ export  default  class  DivideLine extends  Component{
       <View style={styles.viewStyle}>
         {/*左*/}
         <View style={styles.viewLeftStyle}>
-          <Image style={styles.imageLeftStyle} source={{uri:this.props.option.icon}}></Image>
+          <Image source={{uri:this.props.option.icon}} style={styles.imageLeftStyle}/>
           <Text style={styles.textLeftStyle}>{this.props.option.titleLeft}</Text>
         </View>
         {/*右*/}
         <View style={styles.viewLeftStyle}>
           <Text style={styles.textRightStyle}>{this.props.option.titleRight}</Text>
-          <Image style={styles.imageRightStyle} source={{uri:'trip_travel__lion_more_date_icon'}}></Image>
+          <Image source={{uri:'trip_travel__lion_more_date_icon'}} style={styles.imageRightStyle}/>
         </View>
       </View>
     )

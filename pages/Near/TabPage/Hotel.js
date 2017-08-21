@@ -47,7 +47,7 @@ export  default class Hotel extends  Component{
   renderItem(rowDate){
     return (
         <TouchableOpacity activeOpacity={0.7} onPress={ ()=> this.clickItem(rowDate)}>
-          <NearItem rowDate={rowDate}></NearItem>
+          <NearItem rowDate={rowDate}/>
         </TouchableOpacity>
     )
   }

@@ -13,6 +13,11 @@ import {
 
 
 export default class HomeBottom extends Component {
+
+  static  defaultProps={
+    goods:[]
+  };
+
   constructor(props) {
     super(props);
     var ds = new ListView.DataSource( {rowHasChanged:(r1,r2)=>r1!==r2} );
@@ -46,7 +51,7 @@ export default class HomeBottom extends Component {
         >
           {/*左边*/}
           <View style={styles.viewLeftStyle}>
-            <Image style={styles.imageStyle} source={{uri:itemData.icon}}></Image>
+            <Image source={{uri:itemData.icon}} style={styles.imageStyle}/>
           </View >
 
           {/*右边*/}

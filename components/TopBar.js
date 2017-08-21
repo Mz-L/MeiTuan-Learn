@@ -19,7 +19,7 @@ export default class TopBar extends Component {
         {/*左*/}
         <TouchableOpacity style={styles.viewLeftStyle} activeOpacity={0.5}>
           <Text style={styles.textStyle}>广州</Text>
-          <Image style={styles.imageLeftStyle} source={{uri:'trip_train_vector_submit_order_head_arrow'}}></Image>
+          <Image source={{uri:'trip_train_vector_submit_order_head_arrow'}} style={styles.imageLeftStyle}/>
         </TouchableOpacity>
         {/*中*/}
         <View style={styles.viewCenterStyle}>
@@ -29,11 +29,11 @@ export default class TopBar extends Component {
             placeholder="糕点 商圈"
           >
           </TextInput>
-          <Image style={styles.imageCenterStyle} source={{uri:'search_ic_suggestion_default'}}></Image>
+          <Image source={{uri:'search_ic_suggestion_default'}} style={styles.imageCenterStyle}/>
         </View>
         {/*右*/}
         <TouchableOpacity style={styles.viewRightStyle} activeOpacity={0.5}>
-          <Image style={styles.imageRightStyle} source={{uri:'scan'}}></Image>
+          <Image source={{uri:'scan'}} style={styles.imageRightStyle}/>
           <Text style={styles.textStyle}>扫码</Text>
         </TouchableOpacity>
       </View>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     height:18,
     position:'absolute',
     left:8,
-    top:5
+    top:3
   },
   imageRightStyle:{
     width:19,
@@ -85,11 +85,12 @@ const styles = StyleSheet.create({
   },
   inputStyle:{
     flex:1,
+    height:28,
     padding:0,
-    backgroundColor:'white',
-    borderRadius:10,
     paddingLeft:30,
-    color:'gray',
+    borderRadius:10,
+    backgroundColor:'white',
     fontSize:12
   }
+
 });

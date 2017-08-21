@@ -33,14 +33,14 @@ export default class NearPage extends Component {
     if(this.state.resJson==null){
       return (
           <View style={styles.viewWaitStyle}>
-            <Text>正在加载...</Text>
+            <Text>Loading...</Text>
           </View>
       )
     }
 
     return (
         <View style={styles.viewStyle}>
-          <NearBar></NearBar>
+          <NearBar/>
           <ScrollableTabView
             tabBarBackgroundColor="#F5FCFF"
             tabBarUnderlineStyle={{backgroundColor:'#FF4645',height:1}}

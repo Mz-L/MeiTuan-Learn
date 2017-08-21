@@ -19,7 +19,7 @@ export default class NearBar extends Component {
           {/*左*/}
           <TouchableOpacity style={styles.viewLeftStyle} activeOpacity={0.5}>
             <Text style={styles.textStyle}>天河</Text>
-            <Image style={styles.imageLeftStyle} source={{uri:'trip_train_vector_submit_order_head_arrow'}}></Image>
+            <Image source={{uri:'trip_train_vector_submit_order_head_arrow'}} style={styles.imageLeftStyle}/>
           </TouchableOpacity>
           {/*右*/}
           <View style={styles.viewRightStyle}>
@@ -29,7 +29,7 @@ export default class NearBar extends Component {
                 placeholder="找附近 商圈"
             >
             </TextInput>
-            <Image style={styles.imageRightStyle} source={{uri:'search_ic_suggestion_default'}}></Image>
+            <Image source={{uri:'search_ic_suggestion_default'}} style={styles.imageRightStyle}/>
           </View>
         </View>
     );
@@ -64,18 +64,18 @@ const styles = StyleSheet.create({
     height:18,
     position:'absolute',
     left:8,
-    top:5
+    top:3
   },
   textStyle:{
     color:'white'
   },
   inputStyle:{
     flex:1,
+    height:28,
     padding:0,
-    backgroundColor:'white',
-    borderRadius:10,
     paddingLeft:30,
-    color:'gray',
+    borderRadius:10,
+    backgroundColor:'white',
     fontSize:12
   }
 });

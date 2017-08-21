@@ -16,7 +16,7 @@ export  default class NearItem extends Component{
         <View style={styles.viewStyle}>
           {/*左边*/}
           <View style={styles.viewLeftStyle}>
-            <Image style={styles.imageStyle} source={{uri:this.props.rowDate.icon}}></Image>
+            <Image source={{uri:this.props.rowDate.icon}} style={styles.imageStyle}/>
           </View>
 
           {/*右边*/}
@@ -33,7 +33,7 @@ export  default class NearItem extends Component{
             </View>
             {/*中*/}
             <View style={styles.viewCenterStyle}>
-              <Image style={{width:60,height:12,marginRight:5,resizeMode:'contain'}} source={{uri:this.props.rowDate.starIcon}}></Image>
+              <Image source={{uri:this.props.rowDate.starIcon}} style={{width:60,height:12,marginRight:5,resizeMode:'contain'}}/>
               <Text style={styles.descriptionStyle}>人均价:¥{this.props.rowDate.price}</Text>
             </View>
             {/*下*/}
@@ -51,7 +51,7 @@ export  default class NearItem extends Component{
     for(var i=0;i<tagIcons.length;i++){
       var imgUrl=tagIcons[i];
       Tags.push(
-          <Image key={i} style={{width:13,height:13,marginRight:3,resizeMode:'contain'}} source={{uri:imgUrl}}></Image>
+          <Image key={i} source={{uri:imgUrl}} style={{width:13,height:13,marginRight:3,resizeMode:'contain'}}/>
       )
     }
     return Tags;

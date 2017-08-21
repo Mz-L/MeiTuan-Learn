@@ -15,7 +15,7 @@ export default class BackBar extends Component {
   render() {
     return (
         <TouchableOpacity style={styles.topBarStyle} activeOpacity={0.7} onPress={ ()=>this.goBack() }>
-          <Image style={styles.imageStyle} source={{uri:'trip_flight_ic_home_page_back_bt'}}></Image>
+          <Image source={{uri:'trip_flight_ic_home_page_back_bt'}} style={styles.imageStyle}/>
           <Text style={styles.textStyle}>返回</Text>
         </TouchableOpacity>
     );

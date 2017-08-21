@@ -13,6 +13,11 @@ import {
 
 
 export default class HomeCenter extends Component {
+
+  static  defaultProps={
+    items:[]
+  };
+
   render() {
     return (
       <View style={styles.viewStyle}>
@@ -45,7 +50,7 @@ export default class HomeCenter extends Component {
         >
           <Text style={styles.titleStyle}>{item.title}</Text>
           <Text style={[styles.descriptionStyle,{color:item.deccrptionColor} ]}>{item.descrption}</Text>
-          <Image style={styles.imageStyle} source={{uri:item.imageUrl}}></Image>
+          <Image source={{uri:item.imageUrl}} style={styles.imageStyle}/>
         </TouchableOpacity>
     )
   }

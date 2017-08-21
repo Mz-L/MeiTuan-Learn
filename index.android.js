@@ -7,6 +7,7 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  StyleSheet,
   Text,
   View,
   Navigator
@@ -28,5 +29,9 @@ export default class MeiTuan extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+
+});
 
 AppRegistry.registerComponent('MeiTuan', () => MeiTuan);

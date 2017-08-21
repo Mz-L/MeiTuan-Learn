@@ -21,7 +21,7 @@ export  default class OrderItemView extends Component{
         {/*右边*/}
         <View style={styles.viewRightStyle}>
           <Text style={styles.textRightStyle}>{this.props.option.titleRight}</Text>
-          <Image style={styles.imageStyle} source={{uri:'trip_travel__lion_more_date_icon'}}></Image>
+          <Image source={{uri:'trip_travel__lion_more_date_icon'}} style={styles.imageStyle}/>
         </View>
       </View>
     )

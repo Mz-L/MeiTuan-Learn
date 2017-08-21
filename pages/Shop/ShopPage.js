@@ -18,11 +18,12 @@ export default class ShopPage extends Component {
 
   render() {
     return (
-        <View style={styles.viewStyle}>
-          <ShopBar></ShopBar>
+        <View style={{flex:1}}>
+          <ShopBar/>
           <WebView
+            style={{flex:1}}
             ref={'webView'}
-            automaticallyAdjustContentInsets={false}
+            automaticallyAdjustContentInsets={true}
             source={{uri: this.state.url}}
             javaScriptEnabled={true}
             domStorageEnabled={true}
@@ -34,10 +35,3 @@ export default class ShopPage extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  viewStyle:{
-    backgroundColor:'#F5FCFF',
-    flex:1
-  }
-});
